@@ -1,0 +1,494 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  /* As propriedades de largura (width) e de altura (height) incluem o tamanho padding size e a propriedade border, mas não incluem a propriedade margin. */
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* boot CSS */
+html,body{
+    /* para arrumar bug de largura do ie, porem ele caga o scroll do jquery */
+    /* overflow-x: hidden; */
+    height: 100%;
+    background: #131313;
+}
+
+img{
+    width: 100%;
+    max-width: 450px;
+}
+
+.center{
+    max-width: 1280px;
+    padding: 0 2%; /* 0 de espaco na altura e 2% na largura */
+    margin: 0 auto; /* 0 de espaco na altura e largura automatica */
+}
+
+.w50{
+    padding:0 2%;
+    width: 50%;
+}
+
+.w33{
+    width: 33.3%;
+    padding: 0 2%;
+}
+
+.left{
+    float: left;
+}
+
+.right{
+    float: right;
+}
+
+.clear{
+    clear: both;
+}
+
+/* Estilização do site */
+
+/* CABEÇALHO */
+
+header{
+    padding: 20px 0;
+    /* background: #3D437A; */
+    /* background: #300913; */
+    background: #0c0c0c;
+    
+}
+
+input{
+    border: 0;
+}
+
+header .logo{
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.logo a {
+    transition: 1s;
+    text-decoration: none;
+    color: white;
+}
+
+.logo a:hover{
+    color: blueviolet;
+}
+
+.mobile{
+    display: none;
+}
+
+nav.desktop ul{
+    position: relative; /* consigo mudar a posicao do meu ul no header*/
+    top: 6px;
+    list-style-type: none;  /* tira as bolinhas  */
+}
+
+nav.desktop li{
+    font-weight: 400;
+    padding: 0 30px;
+    font-size: 18px;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+nav.desktop a {
+    transition: 1s;
+    color: white;
+    text-decoration: none;
+}
+
+nav.desktop a:hover{
+    color:blueviolet;
+}
+
+/* BANNER E FORM*/
+
+section.banner-container{
+    width: 100%;
+    height: 900px;
+    position: relative;
+}
+
+.banner-single{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-size: cover;
+    background-position: center;
+}
+
+.overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: rgba(0,0,0,0.6);
+
+}
+
+section.banner-container form{
+    width: 95%;
+    max-width: 600px;
+    z-index: 3;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    /* color: #3D437A */
+
+}
+
+section.banner-container form h2{
+    color: white;
+    font-weight: 400;
+    font-size: 35px;
+    text-align: center;
+}
+
+section.banner-container form input[type=email]{
+    width: 100%;
+    height: 50px;
+    margin-top: 10px;
+    background: white;
+    color: #333;
+    font-size: 22px;
+    padding-left: 10px;
+    outline: 0;
+    border: 0;
+}
+
+section.banner-container form input[type=submit]{
+    width: 100%;
+    height: 50px;
+    margin-top: 10px;
+    background: #300913;
+    color:white;
+    font-size: 22px;
+    padding-left: 10px;
+    outline: 0;
+    cursor: pointer;
+    border: 0;
+}
+
+/* AUTOR */
+section.descricao-autor{
+    padding: 40px 0;
+    background: #131313;
+}
+
+section.descricao-autor h2{
+    font-size: 28px;
+    font-weight: 400;
+    color: #ccc;
+}
+
+section.descricao-autor p{
+   font-size: 16px;
+   color: #ccc;
+   font-weight: 300;
+   margin-top: 10px; 
+}
+
+/* ESPECIALIDADES*/
+
+section.especialidades{
+    padding: 40px 0;
+    background: #6d6d6d;
+
+}
+
+section.especialidades h2.title{
+    font-size: 30px;
+    text-align: center;
+    font-weight: 400;
+    color: rgb(202, 202, 202);
+}
+
+.box-especialidade{
+    margin: 40px 0;
+    text-align: center;
+    padding: 0 30px;
+}
+
+.box-especialidade h3{
+    font-size: 40px;
+    color: #3B0B17;
+}
+
+.box-especialidade h4{
+    font-size: 40px;
+    color: #961d3b;
+    font-weight: 300;
+}
+
+.box-especialidade p{
+    color:  rgb(202, 202, 202);
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+/* Depoimentos*/
+
+section.extras{
+    padding: 30px 0;
+    background: #131313;
+}
+
+.servicos-container,.depoimentos-container{
+    padding: 0 50px;
+}
+
+section.extras .title{
+    color:rgb(202, 202, 202);
+    font-weight: 300;
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.depoimento-single{
+    padding: 15px 0;
+    border-bottom: 1px solid #1f1f1f;
+}
+
+p.depoimento-descricao{
+    font-size: 15px;
+    color:rgb(202, 202, 202);
+    font-weight: 300;
+}
+
+p.nome-autor{
+    font-size: 15px;
+    color:rgb(202, 202, 202);
+    font-weight: bold;
+    margin-top: 5px; 
+}
+
+/* Serviços*/
+
+div.servicos ul{
+    margin: 20px 0;
+    /* list-style-position: inside; */
+}
+
+.servicos li{
+    margin-bottom: 15px;
+    font-size: 13px;
+    color:rgb(202, 202, 202);
+    font-weight: 300;
+}
+
+footer{
+    /* background: #300913; */
+    background: #0c0c0c;
+    padding: 30px 0;
+}
+
+footer p {
+    color: white;
+    text-align: center;
+    font-weight: 300;
+    font-size: 16px;
+}
+
+footer.fixed{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* body{ */
+    /* antes era preciso por, mas hoje 12/2/2021 ja arrumaram esse bug */
+    /* overflow-x: hidden; */
+/* } */
+
+/* Página de erro*/
+section.erro-404 h1{
+    text-align: center;
+    color:brown;
+    font-weight: 400;
+    font-size: 28px;
+    border-top: 2px solid brown;
+}
+
+section.erro-404 p{
+    margin-top: 8px;
+    text-align: center;
+    font-size: 16px;
+    color: darkblue;
+    font-weight: 400;
+}
+
+section.erro-404 a{
+    color: rgb(91, 91, 134);
+}
+
+.wraper-404{
+    transform:translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%); /*para o internet explorer*/
+    position: absolute;
+    width: 100%;
+    padding: 0 2%;
+    max-width: 1280px;
+    left: 50%;
+    top: 50%;
+}
+
+/*PÁGINA DE CONTATO*/
+
+#map{
+    width: 100%;
+    height: 400px;
+}
+
+.contato-container{
+    text-align: center;
+    padding: 40px 0;
+}
+
+.contato-container input[type=text]{
+    margin: 8px 0;
+    width: 100%;
+    height: 40px;
+    padding-left: 8px;
+    font-size: 16px;
+    color: #ccc;
+    border: 1px solid #1f1f1f;
+    border-radius: 5px;
+    max-width: 600px;
+    background: #1f1f1f;
+    
+}
+
+.contato-container textarea{
+    padding: 8px;
+    margin: 8px 0;
+    width: 100%;
+    height: 120px;
+    padding-left: 8px;
+    font-size: 16px;
+    color: #ccc;
+    background: #1f1f1f;
+    border: 1px solid #1f1f1f;
+    border-radius: 5px;
+    resize: vertical;
+    max-width: 600px;
+}
+
+.contato-container input[type=submit]{
+    width: 100%;
+    max-width: 600px;
+    border-radius: 5px;
+    height: 50px;
+    margin-top: 10px;
+    background: #8257e6;
+    color:white;
+    font-size: 22px;
+    padding-left: 8px;
+    outline: 0;
+    cursor: pointer;
+    border: 0;
+}
+
+/*BOLINHAS DO MEU FORM DO BANNER CONTAINER*/
+
+.bullets{
+    position: absolute;
+    z-index: 5;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.bullets span{
+    margin: 0 10px;   
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: rgb(141, 141, 141);
+}
+
+.bullets span.active-slider{
+    background:white;
+}
+
+/* RESPONSIVIDADE */
+@media screen and (max-width: 768px){
+    img{
+        float: none !important;
+        display: block;
+        margin:0 auto;
+    }
+
+    .w50{
+        padding: 20px;
+        width: 100%;
+    }
+
+    .w33{
+        padding: 20px;
+        width: 100%;
+    }
+
+    .box-especialidade{
+        padding: 40px 20px;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 700px){
+    nav.desktop{
+        display: none;
+    }
+
+    nav.mobile{
+        display: block;
+    }
+
+    .botao-menu-mobile{
+        font-size: 24px;
+        cursor: pointer;
+        color: white;
+    }
+
+    nav.mobile ul{
+        top: 55px;
+        z-index: 3;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        display: none;
+        text-align: center;
+    }
+
+    nav.mobile li{
+        font-weight: 300;
+        width: 100%;
+        display: block;
+        background: white;
+        border-bottom: 1px solid #ccc;
+        font-size: 17px;
+        padding: 8px 0;
+    }
+
+    nav.mobile li a {
+        display: block;/* para ser clicado em cada linha */
+        color: #444;
+        text-decoration: none;
+    }
+}
+
+
+
